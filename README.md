@@ -1,7 +1,7 @@
 🖥️ SmartBrowserBomb
 
 Behaviour‑triggered proof‑of‑concept malware written in Python.  
-It spams browser tabs, grabs a webcam snapshot, and logs everything — with both GUI and headless modes.
+It spams browser tabs, grabs a webcam snapshot, and logs everything - with both GUI and headless modes.
 
 <img width="975" height="767" alt="image" src="https://github.com/user-attachments/assets/d9b019c6-4195-4a63-9040-ae3afed047f4" />
 
@@ -18,6 +18,8 @@ Educational / demo purposes only. Running malware on systems you don’t own or 
 - Detailed logging to `activity.log`
 
   🔧 Installation & Usage
-1️⃣ Install Required Dependencies
+  
+Install Required Dependencies
+
 Run:
 pip install -r requirements.txt
