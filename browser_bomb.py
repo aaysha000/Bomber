@@ -87,7 +87,7 @@ class SmartBrowserBomb:
 
     def capture_webcam_snapshot(self):
         try:
-            log("📸 Capturing webcam image...")
+            log("Capturing webcam image...")
             cam = cv2.VideoCapture(0)
             time.sleep(1)
             ret, frame = cam.read()
@@ -95,11 +95,11 @@ class SmartBrowserBomb:
                 cv2.imwrite(CAPTURE_FILE, frame)
                 log(f"Webcam snapshot saved as {CAPTURE_FILE}")
             else:
-                log("⚠️ Failed to capture image from webcam.")
+                log("Failed to capture image from webcam.")
             cam.release()
             cv2.destroyAllWindows()
         except Exception as e:
-            log(f"❌ Webcam capture error: {e}")
+            log(f"Webcam capture error: {e}")
 
     def launch_tabs(self):
         log(f"Launching {self.tab_count} tabs...")
@@ -122,7 +122,7 @@ class SmartBrowserBomb:
         self.root.protocol("WM_DELETE_WINDOW", self.stop_bomb)
         self.root.bind('<Control-q>', lambda e: self.stop_bomb())
 
-        tk.Label(self.root, text="🧨 Browser Bomb Monitor", font=("Segoe UI", 16, "bold"), bg="#222", fg="white").pack(pady=10)
+        tk.Label(self.root, text=" Browser Bomb Monitor", font=("Segoe UI", 16, "bold"), bg="#222", fg="white").pack(pady=10)
 
         self.info_text = tk.Text(self.root, height=6, width=65, font=("Consolas", 10), bg="#111", fg="lime", relief="flat")
         self.info_text.pack()
@@ -132,11 +132,11 @@ class SmartBrowserBomb:
         self.info_text.insert(tk.END, f"Launching: {self.tab_count} Tabs\n")
         self.info_text.config(state='disabled')
 
-        tk.Label(self.root, text="🧠 Log Output:", font=("Segoe UI", 11), bg="#222", fg="cyan").pack(pady=(10, 0))
+        tk.Label(self.root, text=" Log Output:", font=("Segoe UI", 11), bg="#222", fg="cyan").pack(pady=(10, 0))
         self.log_box = tk.Text(self.root, height=12, width=72, font=("Consolas", 10), bg="black", fg="white")
         self.log_box.pack(pady=(0, 10))
 
-        tk.Button(self.root, text="🛑 STOP", command=self.stop_bomb, bg="red", fg="white", font=("Segoe UI", 12, "bold"), width=15).pack(pady=5)
+        tk.Button(self.root, text="STOP", command=self.stop_bomb, bg="red", fg="white", font=("Segoe UI", 12, "bold"), width=15).pack(pady=5)
 
         self.update_log_loop()
         self.root.mainloop()
@@ -154,7 +154,7 @@ class SmartBrowserBomb:
 
     def stop_bomb(self):
         self.running = False
-        log("🛑 Bomb stopped by user.")
+        log("Bomb stopped by user.")
         if self.root:
             self.root.destroy()
         sys.exit(0)
