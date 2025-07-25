@@ -17,7 +17,8 @@ Educational / demo purposes only. Running malware on systems you don’t own or 
 - Headless mode (`HEADLESS_MODE=True`) for silent runs
 - Detailed logging to `activity.log`
 
-  🔧 Installation & Usage
+
+🔧 Installation & Usage
   
 Install Required Dependencies
 
