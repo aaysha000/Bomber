@@ -9,7 +9,7 @@ It spams browser tabs, grabs a webcam snapshot, and logs everything - with both 
 Educational / demo purposes only. Running malware on systems you don’t own or have explicit permission to test is illegal.
 
 
-✨ Features
+✨ Features:
 - Tkinter GUI controller & status display
 - Process‑aware trigger (launches when a new user process starts)
 - DoS‑like tab flood via `webbrowser` module
